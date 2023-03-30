@@ -11,3 +11,5 @@ Place the two GIF files in the `normal` folder on your root CircuitPython drive.
 
 The water folder has optional GIFs, that instead of showing the candle blown out it is put out
 by dousing it with water.
+
+Requires CircuitPython 8.0.4 or later.
