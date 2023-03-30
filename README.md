@@ -2,6 +2,8 @@
 
 Turn your Adafruit Funhouse into a virtual birthday cupcake and candle you can blow out!
 
+![Cupcake with candle burning on it](https://github.com/gamblor21/FunCandle/blob/main/normal/lit.gif "Cupcake")
+
 The project will play a GIF of a cupcake with a lit candle. Attach a SHT40 sensor to detect
 breath (by increasing humidty) and the candle blows out!
 
