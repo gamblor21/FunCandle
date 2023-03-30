@@ -1,4 +1,6 @@
-import board
+# SPDX-FileCopyrightText: 2023 Mark Komus
+#
+# SPDX-License-Identifier: MIT
 import gifio
 import displayio
 import time
@@ -10,7 +12,6 @@ import array
 import digitalio
 from adafruit_sht4x import SHT4x
 import adafruit_dotstar
-import simpleio
 import asyncio
 import pwmio
 import random
@@ -154,7 +155,6 @@ if __name__=="__main__":
         spi, command=board.TFT_DC, chip_select=board.TFT_CS, reset=board.TFT_RESET,
         baudrate=FREQ
     )
-    print(spi.frequency)
 
     display = ST7789(display_bus, width=240, height=240, rowstart=80)
     display.root_group = None
@@ -165,7 +165,6 @@ if __name__=="__main__":
 
     i2c = board.I2C()
     sensor = SHT4x(i2c)
-    time.sleep(1)
     base_humidity = sensor.relative_humidity
     print("Base humidity ", base_humidity)
 
@@ -178,9 +177,6 @@ if __name__=="__main__":
 
     pixels = adafruit_dotstar.DotStar(board.DOTSTAR_CLOCK, board.DOTSTAR_DATA, 5)
     lights_on = True
-
-    rowstart=80
-    frames = 0
 
     display_bus = display.bus
 
